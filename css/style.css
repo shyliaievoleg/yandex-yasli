@@ -1,10 +1,10 @@
 /* ================================================== Text & Links */
 body, td, div, select, textarea, input {
-  font: 13px 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  color: #333;
+  font: 13px Arial, Helvetica, sans-serif;
+  color: #212121;
 }
 h1, h2, h3, h1 a, h2 a, h3 a, legend {
-  color:#333;
+  color:#000;
   font-weight: normal;
 }
 h1 {
@@ -16,7 +16,7 @@ h2 {
 h3 {
   font-size: 13px;
   font-weight: 600;
-  margin: 0 0 5px;
+  margin: 0 0 8px;
 }
 p {
   line-height: 1.35em;
@@ -37,7 +37,7 @@ a:hover {
   background: #fff;
   border: 1px solid #d6d6d6;
   border-radius: 3px;
-  padding: 3px 10px;
+  padding: 1px 11px 4px;
   margin: 0;
   cursor: pointer; 
   color: #333;
@@ -51,6 +51,8 @@ a:hover {
   background: transparent;
   border-color: transparent; 
   color: #999;
+  padding: 0;
+  font-size: 12px;
 }
 .btn_without-border:hover {
   background: transparent;
@@ -171,11 +173,11 @@ body {
   flex-flow: row wrap;
   list-style: none;
   margin: 0;
-  padding: 0 210px;
+  padding: 0 208px;
 }
 .main-nav__link {
   display: inline-block;
-  padding: 20px 0 19px;
+  padding: 19px 0;
   margin: 0 20px;
   border-bottom: 2px solid #fff;
   color: #333;
@@ -188,21 +190,22 @@ body {
 
 /* ======================================================= Content */
 .section__content {
-  width: 480px;
+  width: 478px;
   margin: 0 225px;
 }
 .section__title {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-end;
-  padding: 22px 0 27px;
+  padding: 21px 0 29px;
+  letter-spacing: 0.01em;
 }
 .section__title-text {
-  margin: 0 11px 0 0;
+  margin: 0 10px 0 0;
   font-size: 35px;
 }
 .section__title-link {
-  margin: 0 0 5px;
+  margin: 0 0 4px;
 }
 .icon-marker {
   display: inline-block;
@@ -222,7 +225,6 @@ body {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
   border: 1px solid #d6d6d6;
   border-radius: 3px;
   list-style: none; 
@@ -232,25 +234,29 @@ body {
 .tabs__nav-item {
   flex-grow: 1;
 }
-.tabs__nav-item:not(:first-child) {
-  border-left: 1px solid #d6d6d6; 
-}
 .tabs__nav-link {
-  padding: 5px 10px;
+  padding: 5px 19px;
   display: block;
   color: #333;
   text-align: center;
   width: 100%;
+  letter-spacing: 0.02em;
+}
+.tabs__nav-item:not(:first-child) .tabs__nav-link {
+  border-left: 1px solid #d6d6d6; 
 }
 .tabs__nav-link_active,
 .tabs__nav-link:hover {
   background: #ffeba0;
   color: #333;
 }
+.tabs__nav-link_active {
+  padding: 5px 26px 5px 25px;
+}
 .content-title {
   display: flex;
   flex-flow: row wrap;
-  margin: 0 0 24px;
+  margin: 0 0 25px;
 }
 .content-title__text {
   margin: 0 18px 0 0;
@@ -281,7 +287,7 @@ body {
 /* ================================================== Testimonials */
 .testimonials-item {
   width: 100%;
-  margin: 0 0 12px;
+  margin: 0 0 17px;
 }
 .testimonials-item__meta {
   width: 100%;
@@ -309,8 +315,8 @@ body {
   content: '';
   display: block;
   position: absolute;
-  right: -10px;
-  top: 7px;
+  right: -8px;
+  top: 6px;
   width: 2px; 
   height: 2px; 
   background: #999;
@@ -325,7 +331,7 @@ body {
   display: block;
   position: absolute;
   right: -7px;
-  top: 7px;
+  top: 6px;
   width: 2px; 
   height: 2px; 
   background: #999;
@@ -339,20 +345,32 @@ body {
 .testimonials-item__content {
   padding: 0 3px;
 }
+.testimonials-item__content p {
+  margin: 0 0 12px;
+}
 .testimonials-item__actions {
   padding: 0 3px;
+  display: flex;
+  flex-flow: row wrap;
 }
 .testimonials-item__actions .btn {
-  margin: 0 14px 14px 0;
+  margin: 0 20px 11px 0;
+}
+.testimonials-item__actions .btn:first-child {
+  padding-right: 8px;
+}
+.testimonials-item__actions .btn_without-border {
+  margin-top: 2px;
+  margin-left: -5px;
 }
 .testimonials-item__form {
   position: relative;
-  padding: 0 8px 0 0;
+  padding: 3px 5px 0 0;
 }
 .testimonials-item__form-close {
   position: absolute;
-  right: 16px;
-  top: 28px;
+  right: 8px;
+  top: 8px;
   width: 16px;
   height: 16px;
   cursor: pointer;
@@ -375,14 +393,15 @@ body {
 }
 .show-all-testimonial {
   width: 100%;
+  max-width: 473px;
   text-align: center;
   height: 38px;
-  padding: 0 15px;
+  padding: 0 15px 0 36px;
   background: #f2f1ed;
   border-radius: 3px;
   border: none;
   cursor: pointer; 
-  margin: 8px 0 30px;
+  margin: 9px 0 30px;
   font-size: 15px;
 }
 .show-all-testimonial:hover {
@@ -393,6 +412,7 @@ body {
 .form {
   width: 100%;
   margin: 0 0 18px;
+  position: relative;
 }
 .form__row {
   width: 100%;
@@ -409,6 +429,7 @@ body {
   resize: none;
   border: 1px solid #d6d6d6; 
   padding: 10px 12px;
+  margin: 0; 
 }
 .form__submit {
   border: none;
